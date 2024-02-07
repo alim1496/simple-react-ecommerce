@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Lato&family=Lora:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
