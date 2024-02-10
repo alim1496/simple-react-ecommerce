@@ -47,6 +47,7 @@ const Home: FC = () => {
       <TrendingProducts />
       <Banner />
       <LatestProducts />
+      <br />
     </>
   );
 };

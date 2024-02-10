@@ -21,7 +21,10 @@ const LoginModal: FC = () => {
   if (open) {
     return (
       <div className="bg-[#0000007d] w-full min-h-screen fixed inset-0 z-30 flex items-center justify-center font-karla">
-        <div className="relative border shadow rounded p-8 bg-white max-w-md w-full z-40">
+        <div
+          className="relative border shadow rounded p-8 bg-white max-w-md w-full z-40"
+          data-test="login-container"
+        >
           <RxCross1
             className="absolute cursor-pointer right-5 top-5 hover:opacity-85"
             onClick={() => dispatch(updateModal(false))}
@@ -56,6 +59,7 @@ const LoginModal: FC = () => {
               <form onSubmit={submitForm} className="flex flex-col space-y-3">
                 <div className="relative">
                   <input
+                    data-test="input-username"
                     type="text"
                     placeholder="Your username here... (atuny0)"
                     className="border w-full border-black py-2 px-8 rounded"
@@ -66,6 +70,7 @@ const LoginModal: FC = () => {
                 </div>
                 <div className="relative">
                   <input
+                    data-test="input-password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     type="password"
@@ -75,6 +80,7 @@ const LoginModal: FC = () => {
                   <RiLockPasswordFill className="absolute top-3 left-2 text-lg" />
                 </div>
                 <input
+                  data-test="input-submit"
                   type="submit"
                   value="Submit"
                   className="bg-blue-500 text-white rounded p-2 hover:bg-blue-700 cursor-pointer"

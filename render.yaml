@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: app
-    buildCommand: yarn build
-    startCommand: yarn dev
-    nginx:
-      locationInclude: /etc/nginx/conf.d/*.conf

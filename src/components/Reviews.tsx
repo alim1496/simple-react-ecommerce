@@ -87,7 +87,7 @@ const Reviews: FC<{ id: number }> = ({ id }) => {
       <h1 className="text-2xl font-semibold mb-2">Reviews</h1>
       <div className="space-y-2">
         {items?.map(({ username, rating, review }) => (
-          <div key={username} className="leading-4">
+          <div key={username} className="leading-4" data-test="review-item">
             <h3 className="font-semibold text-md">{username}</h3>
             <RatingStar rating={rating} />
             <p className="text-sm leading-4">{review}</p>

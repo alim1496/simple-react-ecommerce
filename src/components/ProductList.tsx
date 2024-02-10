@@ -10,7 +10,10 @@ const ProductList: FC<{ title: string; products: Product[] }> = ({
     <div className="sm:flex items-center justify-between">
       <h2 className="text-4xl font-medium font-lora">{title}</h2>
     </div>
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-4">
+    <div
+      className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-4"
+      data-test="product-list-container"
+    >
       {products?.map((product) => (
         <ProductCard
           key={product.id}

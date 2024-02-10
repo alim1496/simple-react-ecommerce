@@ -1,0 +1,457 @@
+{
+  "products": [
+    {
+      "id": 25,
+      "title": "Gulab Powder 50 Gram",
+      "description": "Dry Rose Flower Powder Gulab Powder 50 Gram • Treats Wounds",
+      "price": 70,
+      "discountPercentage": 13.58,
+      "rating": 4.87,
+      "stock": 47,
+      "brand": "Dry Rose",
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/25/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/25/1.png",
+        "https://cdn.dummyjson.com/product-images/25/2.jpg",
+        "https://cdn.dummyjson.com/product-images/25/3.png",
+        "https://cdn.dummyjson.com/product-images/25/4.jpg",
+        "https://cdn.dummyjson.com/product-images/25/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 26,
+      "title": "Plant Hanger For Home",
+      "description": "Boho Decor Plant Hanger For Home Wall Decoration Macrame Wall Hanging Shelf",
+      "price": 41,
+      "discountPercentage": 17.86,
+      "rating": 4.08,
+      "stock": 131,
+      "brand": "Boho Decor",
+      "category": "home-decoration",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/26/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/26/1.jpg",
+        "https://cdn.dummyjson.com/product-images/26/2.jpg",
+        "https://cdn.dummyjson.com/product-images/26/3.jpg",
+        "https://cdn.dummyjson.com/product-images/26/4.jpg",
+        "https://cdn.dummyjson.com/product-images/26/5.jpg",
+        "https://cdn.dummyjson.com/product-images/26/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 27,
+      "title": "Flying Wooden Bird",
+      "description": "Package Include 6 Birds with Adhesive Tape Shape: 3D Shaped Wooden Birds Material: Wooden MDF, Laminated 3.5mm",
+      "price": 51,
+      "discountPercentage": 15.58,
+      "rating": 4.41,
+      "stock": 17,
+      "brand": "Flying Wooden",
+      "category": "home-decoration",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/27/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/27/1.jpg",
+        "https://cdn.dummyjson.com/product-images/27/2.jpg",
+        "https://cdn.dummyjson.com/product-images/27/3.jpg",
+        "https://cdn.dummyjson.com/product-images/27/4.jpg",
+        "https://cdn.dummyjson.com/product-images/27/thumbnail.webp"
+      ]
+    },
+    {
+      "id": 28,
+      "title": "3D Embellishment Art Lamp",
+      "description": "3D led lamp sticker Wall sticker 3d wall art light on/off button  cell operated (included)",
+      "price": 20,
+      "discountPercentage": 16.49,
+      "rating": 4.82,
+      "stock": 54,
+      "brand": "LED Lights",
+      "category": "home-decoration",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/28/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/28/1.jpg",
+        "https://cdn.dummyjson.com/product-images/28/2.jpg",
+        "https://cdn.dummyjson.com/product-images/28/3.png",
+        "https://cdn.dummyjson.com/product-images/28/4.jpg",
+        "https://cdn.dummyjson.com/product-images/28/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 29,
+      "title": "Handcraft Chinese style",
+      "description": "Handcraft Chinese style art luxury palace hotel villa mansion home decor ceramic vase with brass fruit plate",
+      "price": 60,
+      "discountPercentage": 15.34,
+      "rating": 4.44,
+      "stock": 7,
+      "brand": "luxury palace",
+      "category": "home-decoration",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/29/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/29/1.jpg",
+        "https://cdn.dummyjson.com/product-images/29/2.jpg",
+        "https://cdn.dummyjson.com/product-images/29/3.webp",
+        "https://cdn.dummyjson.com/product-images/29/4.webp",
+        "https://cdn.dummyjson.com/product-images/29/thumbnail.webp"
+      ]
+    },
+    {
+      "id": 30,
+      "title": "Key Holder",
+      "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
+      "price": 30,
+      "discountPercentage": 2.92,
+      "rating": 4.92,
+      "stock": 54,
+      "brand": "Golden",
+      "category": "home-decoration",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/30/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/30/1.jpg",
+        "https://cdn.dummyjson.com/product-images/30/2.jpg",
+        "https://cdn.dummyjson.com/product-images/30/3.jpg",
+        "https://cdn.dummyjson.com/product-images/30/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 31,
+      "title": "Mornadi Velvet Bed",
+      "description": "Mornadi Velvet Bed Base with Headboard Slats Support Classic Style Bedroom Furniture Bed Set",
+      "price": 40,
+      "discountPercentage": 17,
+      "rating": 4.16,
+      "stock": 140,
+      "brand": "Furniture Bed Set",
+      "category": "furniture",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/31/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/31/1.jpg",
+        "https://cdn.dummyjson.com/product-images/31/2.jpg",
+        "https://cdn.dummyjson.com/product-images/31/3.jpg",
+        "https://cdn.dummyjson.com/product-images/31/4.jpg",
+        "https://cdn.dummyjson.com/product-images/31/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 32,
+      "title": "Sofa for Coffe Cafe",
+      "description": "Ratttan Outdoor furniture Set Waterproof  Rattan Sofa for Coffe Cafe",
+      "price": 50,
+      "discountPercentage": 15.59,
+      "rating": 4.74,
+      "stock": 30,
+      "brand": "Ratttan Outdoor",
+      "category": "furniture",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/32/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/32/1.jpg",
+        "https://cdn.dummyjson.com/product-images/32/2.jpg",
+        "https://cdn.dummyjson.com/product-images/32/3.jpg",
+        "https://cdn.dummyjson.com/product-images/32/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 33,
+      "title": "3 Tier Corner Shelves",
+      "description": "3 Tier Corner Shelves | 3 PCs Wall Mount Kitchen Shelf | Floating Bedroom Shelf",
+      "price": 700,
+      "discountPercentage": 17,
+      "rating": 4.31,
+      "stock": 106,
+      "brand": "Kitchen Shelf",
+      "category": "furniture",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/33/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/33/1.jpg",
+        "https://cdn.dummyjson.com/product-images/33/2.jpg",
+        "https://cdn.dummyjson.com/product-images/33/3.jpg",
+        "https://cdn.dummyjson.com/product-images/33/4.jpg",
+        "https://cdn.dummyjson.com/product-images/33/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 34,
+      "title": "Plastic Table",
+      "description": "V﻿ery good quality plastic table for multi purpose now in reasonable price",
+      "price": 50,
+      "discountPercentage": 4,
+      "rating": 4.01,
+      "stock": 136,
+      "brand": "Multi Purpose",
+      "category": "furniture",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/34/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/34/1.jpg",
+        "https://cdn.dummyjson.com/product-images/34/2.jpg",
+        "https://cdn.dummyjson.com/product-images/34/3.jpg",
+        "https://cdn.dummyjson.com/product-images/34/4.jpg",
+        "https://cdn.dummyjson.com/product-images/34/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 35,
+      "title": "3 DOOR PORTABLE",
+      "description": "Material: Stainless Steel and Fabric  Item Size: 110 cm x 45 cm x 175 cm Package Contents: 1 Storage Wardrobe",
+      "price": 41,
+      "discountPercentage": 7.98,
+      "rating": 4.06,
+      "stock": 68,
+      "brand": "AmnaMart",
+      "category": "furniture",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/35/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/35/1.jpg",
+        "https://cdn.dummyjson.com/product-images/35/2.jpg",
+        "https://cdn.dummyjson.com/product-images/35/3.jpg",
+        "https://cdn.dummyjson.com/product-images/35/4.jpg",
+        "https://cdn.dummyjson.com/product-images/35/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 36,
+      "title": "Sleeve Shirt Womens",
+      "description": "Cotton Solid Color Professional Wear Sleeve Shirt Womens Work Blouses Wholesale Clothing Casual Plain Custom Top OEM Customized",
+      "price": 90,
+      "discountPercentage": 10.89,
+      "rating": 4.26,
+      "stock": 39,
+      "brand": "Professional Wear",
+      "category": "tops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/36/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/36/1.jpg",
+        "https://cdn.dummyjson.com/product-images/36/2.webp",
+        "https://cdn.dummyjson.com/product-images/36/3.webp",
+        "https://cdn.dummyjson.com/product-images/36/4.jpg",
+        "https://cdn.dummyjson.com/product-images/36/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 37,
+      "title": "ank Tops for Womens/Girls",
+      "description": "PACK OF 3 CAMISOLES ,VERY COMFORTABLE SOFT COTTON STUFF, COMFORTABLE IN ALL FOUR SEASONS",
+      "price": 50,
+      "discountPercentage": 12.05,
+      "rating": 4.52,
+      "stock": 107,
+      "brand": "Soft Cotton",
+      "category": "tops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/37/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/37/1.jpg",
+        "https://cdn.dummyjson.com/product-images/37/2.jpg",
+        "https://cdn.dummyjson.com/product-images/37/3.jpg",
+        "https://cdn.dummyjson.com/product-images/37/4.jpg",
+        "https://cdn.dummyjson.com/product-images/37/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 38,
+      "title": "sublimation plain kids tank",
+      "description": "sublimation plain kids tank tops wholesale",
+      "price": 100,
+      "discountPercentage": 11.12,
+      "rating": 4.8,
+      "stock": 20,
+      "brand": "Soft Cotton",
+      "category": "tops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/38/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/38/1.png",
+        "https://cdn.dummyjson.com/product-images/38/2.jpg",
+        "https://cdn.dummyjson.com/product-images/38/3.jpg",
+        "https://cdn.dummyjson.com/product-images/38/4.jpg"
+      ]
+    },
+    {
+      "id": 39,
+      "title": "Women Sweaters Wool",
+      "description": "2021 Custom Winter Fall Zebra Knit Crop Top Women Sweaters Wool Mohair Cos Customize Crew Neck Women' S Crop Top Sweater",
+      "price": 600,
+      "discountPercentage": 17.2,
+      "rating": 4.55,
+      "stock": 55,
+      "brand": "Top Sweater",
+      "category": "tops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/39/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/39/1.jpg",
+        "https://cdn.dummyjson.com/product-images/39/2.jpg",
+        "https://cdn.dummyjson.com/product-images/39/3.jpg",
+        "https://cdn.dummyjson.com/product-images/39/4.jpg",
+        "https://cdn.dummyjson.com/product-images/39/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 40,
+      "title": "women winter clothes",
+      "description": "women winter clothes thick fleece hoodie top with sweat pantjogger women sweatsuit set joggers pants two piece pants set",
+      "price": 57,
+      "discountPercentage": 13.39,
+      "rating": 4.91,
+      "stock": 84,
+      "brand": "Top Sweater",
+      "category": "tops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/40/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/40/1.jpg",
+        "https://cdn.dummyjson.com/product-images/40/2.jpg"
+      ]
+    },
+    {
+      "id": 41,
+      "title": "NIGHT SUIT",
+      "description": "NIGHT SUIT RED MICKY MOUSE..  For Girls. Fantastic Suits.",
+      "price": 55,
+      "discountPercentage": 15.05,
+      "rating": 4.65,
+      "stock": 21,
+      "brand": "RED MICKY MOUSE..",
+      "category": "womens-dresses",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/41/thumbnail.webp",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/41/1.jpg",
+        "https://cdn.dummyjson.com/product-images/41/2.webp",
+        "https://cdn.dummyjson.com/product-images/41/3.jpg",
+        "https://cdn.dummyjson.com/product-images/41/4.jpg",
+        "https://cdn.dummyjson.com/product-images/41/thumbnail.webp"
+      ]
+    },
+    {
+      "id": 42,
+      "title": "Stiched Kurta plus trouser",
+      "description": "FABRIC: LILEIN CHEST: 21 LENGHT: 37 TROUSER: (38) :ARABIC LILEIN",
+      "price": 80,
+      "discountPercentage": 15.37,
+      "rating": 4.05,
+      "stock": 148,
+      "brand": "Digital Printed",
+      "category": "womens-dresses",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/42/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/42/1.png",
+        "https://cdn.dummyjson.com/product-images/42/2.png",
+        "https://cdn.dummyjson.com/product-images/42/3.png",
+        "https://cdn.dummyjson.com/product-images/42/4.jpg",
+        "https://cdn.dummyjson.com/product-images/42/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 43,
+      "title": "frock gold printed",
+      "description": "Ghazi fabric long frock gold printed ready to wear stitched collection (G992)",
+      "price": 600,
+      "discountPercentage": 15.55,
+      "rating": 4.31,
+      "stock": 150,
+      "brand": "Ghazi Fabric",
+      "category": "womens-dresses",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/43/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/43/1.jpg",
+        "https://cdn.dummyjson.com/product-images/43/2.jpg",
+        "https://cdn.dummyjson.com/product-images/43/3.jpg",
+        "https://cdn.dummyjson.com/product-images/43/4.jpg",
+        "https://cdn.dummyjson.com/product-images/43/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 44,
+      "title": "Ladies Multicolored Dress",
+      "description": "This classy shirt for women gives you a gorgeous look on everyday wear and specially for semi-casual wears.",
+      "price": 79,
+      "discountPercentage": 16.88,
+      "rating": 4.03,
+      "stock": 2,
+      "brand": "Ghazi Fabric",
+      "category": "womens-dresses",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/44/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/44/1.jpg",
+        "https://cdn.dummyjson.com/product-images/44/2.jpg",
+        "https://cdn.dummyjson.com/product-images/44/3.jpg",
+        "https://cdn.dummyjson.com/product-images/44/4.jpg",
+        "https://cdn.dummyjson.com/product-images/44/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 45,
+      "title": "Malai Maxi Dress",
+      "description": "Ready to wear, Unique design according to modern standard fashion, Best fitting ,Imported stuff",
+      "price": 50,
+      "discountPercentage": 5.07,
+      "rating": 4.67,
+      "stock": 96,
+      "brand": "IELGY",
+      "category": "womens-dresses",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/45/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/45/1.jpg",
+        "https://cdn.dummyjson.com/product-images/45/2.webp",
+        "https://cdn.dummyjson.com/product-images/45/3.jpg",
+        "https://cdn.dummyjson.com/product-images/45/4.jpg",
+        "https://cdn.dummyjson.com/product-images/45/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 46,
+      "title": "women's shoes",
+      "description": "Close: Lace, Style with bottom: Increased inside, Sole Material: Rubber",
+      "price": 40,
+      "discountPercentage": 16.96,
+      "rating": 4.14,
+      "stock": 72,
+      "brand": "IELGY fashion",
+      "category": "womens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/46/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/46/1.webp",
+        "https://cdn.dummyjson.com/product-images/46/2.jpg",
+        "https://cdn.dummyjson.com/product-images/46/3.jpg",
+        "https://cdn.dummyjson.com/product-images/46/4.jpg",
+        "https://cdn.dummyjson.com/product-images/46/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 47,
+      "title": "Sneaker shoes",
+      "description": "Synthetic Leather Casual Sneaker shoes for Women/girls Sneakers For Women",
+      "price": 120,
+      "discountPercentage": 10.37,
+      "rating": 4.19,
+      "stock": 50,
+      "brand": "Synthetic Leather",
+      "category": "womens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/47/thumbnail.jpeg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/47/1.jpg",
+        "https://cdn.dummyjson.com/product-images/47/2.jpg",
+        "https://cdn.dummyjson.com/product-images/47/3.jpg",
+        "https://cdn.dummyjson.com/product-images/47/thumbnail.jpeg"
+      ]
+    },
+    {
+      "id": 48,
+      "title": "Women Strip Heel",
+      "description": "Features: Flip-flops, Mid Heel, Comfortable, Striped Heel, Antiskid, Striped",
+      "price": 40,
+      "discountPercentage": 10.83,
+      "rating": 4.02,
+      "stock": 25,
+      "brand": "Sandals Flip Flops",
+      "category": "womens-shoes",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/48/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/48/1.jpg",
+        "https://cdn.dummyjson.com/product-images/48/2.jpg",
+        "https://cdn.dummyjson.com/product-images/48/3.jpg",
+        "https://cdn.dummyjson.com/product-images/48/4.jpg",
+        "https://cdn.dummyjson.com/product-images/48/thumbnail.jpg"
+      ]
+    }
+  ],
+  "total": 100,
+  "skip": 24,
+  "limit": 24
+}

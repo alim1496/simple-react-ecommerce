@@ -54,18 +54,23 @@ const Cart: FC = () => {
               <span
                 className="w-1/2 border border-gray-500 rounded cursor-pointer text-center py-1"
                 onClick={handleOrder}
+                data-test="confirm-order-btn"
               >
                 Confirm
               </span>
             </div>
           </div>
         ) : (
-          <div className="max-w-[400px] w-full min-h-full bg-white absolute right-0 top-0 p-6 font-karla">
+          <div
+            className="max-w-[400px] w-full min-h-full bg-white absolute right-0 top-0 p-6 font-karla"
+            data-test="cart-container"
+          >
             <div className="flex items-center justify-between">
               <h3 className="font-semibold text-2xl">Your Cart</h3>
               <RxCross1
                 className="text-[24px] cursor-pointer hover:opacity-70"
                 onClick={() => dispatch(setCartState(false))}
+                data-test="cart-close"
               />
             </div>
             <div className="mt-6 space-y-2">
@@ -86,6 +91,7 @@ const Cart: FC = () => {
                 </div>
                 <button
                   type="button"
+                  data-test="checkout-btn"
                   onClick={() => setCheckout(true)}
                   className="w-full text-center text-white bg-blue-500 py-2 my-4 rounded font-bold text-xl hover:bg-blue-700"
                 >

@@ -10,6 +10,7 @@ const Banner: FC = () => (
       <Link
         to="/product/4"
         className="inline-block bg-white rounded-md px-6 py-3 hover:bg-blue-500 hover:text-white"
+        data-test="banner-btn"
       >
         Shop Now
       </Link>

@@ -190,6 +190,7 @@ const SingleProduct: FC = () => {
       </div>
       <hr className="mt-4" />
       <ProductList title="Similar Products" products={similar} />
+      <br />
     </div>
   );
 };

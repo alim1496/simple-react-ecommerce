@@ -31,11 +31,15 @@ const CustomPopup: FC = () => {
       <div
         className="inline-block cursor-pointer hover:opacity-85"
         onClick={handlePopup}
+        data-test="username-popup"
       >
         {username}
       </div>
       {isVisible && (
-        <div className="absolute p-4 left-[-50px] w-40 z-50 mt-2 rounded-md shadow-2xl bg-white ring-1 transition-all ring-black ring-opacity-5 focus:outline-none">
+        <div
+          className="absolute p-4 left-[-50px] w-40 z-50 mt-2 rounded-md shadow-2xl bg-white ring-1 transition-all ring-black ring-opacity-5 focus:outline-none"
+          data-test="popup-content-list"
+        >
           <table>
             <tbody>
               <tr>
@@ -52,7 +56,10 @@ const CustomPopup: FC = () => {
                 <td className="text-center">
                   <MdFavoriteBorder />
                 </td>
-                <td className="hover:underline cursor-pointer text-lg pl-2">
+                <td
+                  className="hover:underline cursor-pointer text-lg pl-2"
+                  data-test="wishlist-container"
+                >
                   <Link to="/wishlist" onClick={hidePopup}>
                     Wishlist
                   </Link>
@@ -65,6 +72,7 @@ const CustomPopup: FC = () => {
                 <td
                   className="hover:underline cursor-pointer text-lg pl-2"
                   onClick={handleLogout}
+                  data-test="logout-btn"
                 >
                   Logout
                 </td>
