@@ -17,6 +17,7 @@ Welcome to my E-commerce App! This project is a dummy e-commerce application bui
 - **Vite:** A modern build tool that serves your code via native ES Module imports during development for faster performance.
 - **TypeScript:** A statically typed superset of JavaScript that enhances code quality and developer productivity.
 - **Redux Toolkit:** A simplified state management library for managing application state efficiently.
+- **Cypress:** A next-generation front-end testing tool designed for the modern web.
 
 ## Getting Started
 
