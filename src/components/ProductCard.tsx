@@ -44,7 +44,11 @@ const ProductCard: FC<Product> = ({
     <div className="border border-gray-200 font-lato" data-test="product-card">
       <div className="text-center border-b border-gray-200">
         <Link to={{ pathname: `/product/${id}` }}>
-          <img src={thumbnail} alt={title} className="inline-block h-60" />
+          <img
+            src={thumbnail}
+            alt={title}
+            className="inline-block h-60 transition-transform duration-200 hover:scale-110"
+          />
         </Link>
       </div>
       <div className="px-8 pt-4">
