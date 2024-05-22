@@ -1,10 +1,14 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { updateBanner } from "../redux/features/homeSlice";
 
 const BannerPopup: FC = () => {
   const show = useAppSelector((state) => state.homeReducer.isBannerVisible);
   const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    localStorage.setItem("banner-popup-showed", "true");
+  }, []);
 
   if (!show) return null;
 
