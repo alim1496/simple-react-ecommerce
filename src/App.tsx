@@ -13,6 +13,7 @@ import Wishlist from "./pages/Wishlist";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Profile from "./pages/Profile";
 import AllProducts from "./pages/AllProducts";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
       <Footer />
       <Cart />
       <LoginModal />
+      <ScrollToTopButton />
     </Provider>
   );
 }
