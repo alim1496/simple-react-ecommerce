@@ -14,6 +14,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Profile from "./pages/Profile";
 import AllProducts from "./pages/AllProducts";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import BannerPopup from "./components/BannerPopup";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
       <Cart />
       <LoginModal />
       <ScrollToTopButton />
+      <BannerPopup />
     </Provider>
   );
 }
