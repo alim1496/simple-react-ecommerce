@@ -22,7 +22,7 @@ const LoginModal: FC = () => {
     return (
       <div className="bg-[#0000007d] w-full min-h-screen fixed inset-0 z-30 flex items-center justify-center font-karla">
         <div
-          className="relative border shadow rounded p-8 bg-white max-w-md w-full z-40"
+          className="relative border shadow rounded p-8 bg-white max-w-md w-full z-40 dark:bg-slate-800 dark:text-white"
           data-test="login-container"
         >
           <RxCross1
@@ -62,7 +62,7 @@ const LoginModal: FC = () => {
                     data-test="input-username"
                     type="text"
                     placeholder="Your username here... (atuny0)"
-                    className="border w-full border-black py-2 px-8 rounded"
+                    className="border w-full border-black py-2 px-8 rounded dark:bg-slate-600"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                   />
@@ -75,7 +75,7 @@ const LoginModal: FC = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     type="password"
                     placeholder="Your password here... (9uQFF1Lh)"
-                    className="border w-full border-black py-2 px-8 rounded"
+                    className="border w-full border-black py-2 px-8 rounded dark:bg-slate-600"
                   />
                   <RiLockPasswordFill className="absolute top-3 left-2 text-lg" />
                 </div>
