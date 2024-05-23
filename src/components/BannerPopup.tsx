@@ -1,14 +1,10 @@
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { updateBanner } from "../redux/features/homeSlice";
 
 const BannerPopup: FC = () => {
   const show = useAppSelector((state) => state.homeReducer.isBannerVisible);
   const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    localStorage.setItem("banner-popup-showed", "true");
-  }, []);
 
   if (!show) return null;
 
@@ -25,7 +21,9 @@ const BannerPopup: FC = () => {
           className="w-[50vw] min-w-[300px] m-auto"
         />
         <button
-          onClick={() => dispatch(updateBanner(false))}
+          onClick={() => {
+            dispatch(updateBanner(false));
+          }}
           className="absolute top-0 right-0 m-2 bg-white rounded-full p-2"
         >
           ✖

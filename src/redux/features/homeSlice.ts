@@ -2,11 +2,7 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { HomeSlice } from "../../models/HomeSlice";
 
 const initialState: HomeSlice = {
-  // isBannerVisible: !(
-  //   localStorage.getItem("banner-popup-showed") !== null &&
-  //   localStorage.getItem("banner-popup-showed") !== "true"
-  // ),
-  isBannerVisible: false,
+  isBannerVisible: true,
   isDarkMode: false,
 };
 
