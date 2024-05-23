@@ -76,12 +76,12 @@ const AllProducts: FC = () => {
     <div className="container mx-auto min-h-[83vh] p-4 font-karla">
       <div className="grid grid-cols-5 gap-1">
         <div className="col-span-1">
-          <h1 className="font-bold mb-2">Categories</h1>
+          <h1 className="font-bold mb-2 dark:text-white">Categories</h1>
           <div className="space-y-1">
             {allCategories.map((_category) => (
               <div
                 key={_category}
-                className={`cursor-pointer hover:text-blue-500 ${
+                className={`cursor-pointer dark:text-white hover:text-blue-500 ${
                   _category === category ? "text-blue-500" : ""
                 }`}
                 onClick={() => {
@@ -98,14 +98,14 @@ const AllProducts: FC = () => {
         </div>
         <div className="col-span-4 space-y-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2 text-lg">
+            <div className="flex items-center space-x-2 text-lg dark:text-white">
               <span>Products</span>
               <span> {">"} </span>
               <span className="font-bold">{category}</span>
             </div>
             <select
               ref={sortRef}
-              className="border border-black rounded p-1"
+              className="border border-black dark:border-white rounded p-1 dark:text-white dark:bg-slate-600"
               onChange={(e) => sortProducts(e.target.value)}
             >
               <option value="default">Default</option>
