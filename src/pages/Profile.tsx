@@ -43,7 +43,7 @@ const Profile: FC = () => {
   }, []);
 
   return (
-    <div className="container mx-auto min-h-[83vh] w-full max-w-5xl">
+    <div className="container mx-auto min-h-[83vh] w-full max-w-5xl dark:text-white">
       <h1 className="text-4xl p-4 font-bold font-lora">Your Account</h1>
       <div className="font-karla grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-1 p-4">
         <img src={info?.image} alt="pp" className="text-center" />
