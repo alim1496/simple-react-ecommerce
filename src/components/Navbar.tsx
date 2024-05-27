@@ -53,6 +53,13 @@ const Navbar: FC = () => {
             >
               Products
             </Link>
+            <Link
+              to="/categories"
+              className="text-xl font-bold"
+              data-test="main-categories"
+            >
+              Categories
+            </Link>
             <div className="flex items-center gap-2">
               {username !== "" ? (
                 <img

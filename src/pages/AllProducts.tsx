@@ -1,50 +1,32 @@
 import { FC, useEffect, useRef, useState } from "react";
 import { useAppSelector, useAppDispatch } from "../redux/hooks";
-import { addCategories, addProducts } from "../redux/features/productSlice";
+import { addProducts } from "../redux/features/productSlice";
 import ProductCard from "../components/ProductCard";
 import { Product } from "../models/Product";
 
 const AllProducts: FC = () => {
   const dispatch = useAppDispatch();
-  const [category, setCategory] = useState("all");
   const sortRef = useRef<HTMLSelectElement>(null);
   const [currentProducts, setCurrentProducts] = useState<Product[]>([]);
   const allProducts = useAppSelector(
     (state) => state.productReducer.allProducts
   );
-  const allCategories = useAppSelector(
-    (state) => state.productReducer.categories
-  );
 
   useEffect(() => {
     const fetchProducts = () => {
-      fetch("https://dummyjson.com/products?limit=100")
+      fetch("https://dummyjson.com/products?limit=500")
         .then((res) => res.json())
         .then(({ products }) => {
           dispatch(addProducts(products));
         });
     };
-    const fetchCategories = () => {
-      fetch("https://dummyjson.com/products/categories")
-        .then((res) => res.json())
-        .then((data) => {
-          dispatch(addCategories(data));
-        });
-    };
+
     if (allProducts.length === 0) fetchProducts();
-    if (allCategories.length === 0) fetchCategories();
-  }, [allProducts, allCategories, dispatch]);
+  }, [allProducts, dispatch]);
 
   useEffect(() => {
     setCurrentProducts(allProducts);
   }, [allProducts]);
-
-  useEffect(() => {
-    if (category !== "all") {
-      const updated = allProducts.filter((pro) => pro.category === category);
-      setCurrentProducts(updated);
-    }
-  }, [category, allProducts]);
 
   const sortProducts = (sortValue: string) => {
     if (sortValue === "asc") {
@@ -74,35 +56,10 @@ const AllProducts: FC = () => {
 
   return (
     <div className="container mx-auto min-h-[83vh] p-4 font-karla">
-      <div className="grid grid-cols-5 gap-1">
-        <div className="col-span-1">
-          <h1 className="font-bold mb-2 dark:text-white">Categories</h1>
-          <div className="space-y-1">
-            {allCategories.map((_category) => (
-              <div
-                key={_category.slug}
-                className={`cursor-pointer dark:text-white hover:text-blue-500 ${
-                  _category.slug === category ? "text-blue-500" : ""
-                }`}
-                onClick={() => {
-                  setCategory(_category.slug);
-                  if (sortRef && sortRef.current)
-                    sortRef.current.value = "default";
-                  sortProducts("default");
-                }}
-              >
-                {_category.name}
-              </div>
-            ))}
-          </div>
-        </div>
+      <div className="grid grid-cols-4 gap-1">
         <div className="col-span-4 space-y-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2 text-lg dark:text-white">
-              <span>Products</span>
-              <span> {">"} </span>
-              <span className="font-bold">{category}</span>
-            </div>
+            <span className="text-lg dark:text-white">Products</span>
             <select
               ref={sortRef}
               className="border border-black dark:border-white rounded p-1 dark:text-white dark:bg-slate-600"
@@ -113,7 +70,7 @@ const AllProducts: FC = () => {
               <option value="desc">Price (high to low)</option>
             </select>
           </div>
-          <div className="grid gap-4 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1">
+          <div className="grid gap-4 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
             {currentProducts.map((product) => (
               <ProductCard key={product.id} {...product} />
             ))}
