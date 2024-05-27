@@ -80,18 +80,18 @@ const AllProducts: FC = () => {
           <div className="space-y-1">
             {allCategories.map((_category) => (
               <div
-                key={_category}
+                key={_category.slug}
                 className={`cursor-pointer dark:text-white hover:text-blue-500 ${
-                  _category === category ? "text-blue-500" : ""
+                  _category.slug === category ? "text-blue-500" : ""
                 }`}
                 onClick={() => {
-                  setCategory(_category);
+                  setCategory(_category.slug);
                   if (sortRef && sortRef.current)
                     sortRef.current.value = "default";
                   sortProducts("default");
                 }}
               >
-                {_category}
+                {_category.name}
               </div>
             ))}
           </div>
