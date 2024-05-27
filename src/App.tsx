@@ -15,6 +15,8 @@ import Profile from "./pages/Profile";
 import AllProducts from "./pages/AllProducts";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import BannerPopup from "./components/BannerPopup";
+import AllCategories from "./pages/AllCategories";
+import SingleCategory from "./pages/SingleCategory";
 
 function App() {
   return (
@@ -23,7 +25,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<AllProducts />} />
+        <Route path="/categories" element={<AllCategories />} />
         <Route path="/product/:productID" element={<SingleProduct />} />
+        <Route path="/category/:slug" element={<SingleCategory />} />
         <Route path="/wishlist" element={<ProtectedRoute />}>
           <Route path="/wishlist" element={<Wishlist />} />
         </Route>
