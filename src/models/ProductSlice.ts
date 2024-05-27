@@ -1,3 +1,4 @@
+import { Category } from "./Category";
 import { Product } from "./Product";
 
 export interface ProductSlice {
@@ -5,5 +6,5 @@ export interface ProductSlice {
   newProducts: Product[];
   featuredProducts: Product[];
   wishlist: Product[];
-  categories: string[];
+  categories: Category[];
 }
