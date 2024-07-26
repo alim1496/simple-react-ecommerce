@@ -22,5 +22,5 @@
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }],
-  "exclude": ["cypress.config.ts", "cypress", "node_modules"]
+  "exclude": ["node_modules"]
 }
