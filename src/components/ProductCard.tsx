@@ -74,7 +74,7 @@ const ProductCard: FC<Product> = ({
           type="button"
           className="flex items-center space-x-2 hover:bg-blue-500 text-white py-2 px-4 rounded bg-pink-500"
           onClick={addCart}
-          data-test="add-cart-btn"
+          data-test="add-to-cart-button"
         >
           <AiOutlineShoppingCart />
           <span>ADD TO CART</span>

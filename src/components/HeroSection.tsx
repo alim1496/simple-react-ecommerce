@@ -1,7 +1,8 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const HeroSection: FC = () => {
+  const location = useLocation();
   return (
     <div className="bg-[#e3edf6] dark:bg-slate-600 font-lora">
       <div className="container px-4 grid md:grid-cols-2 py-8 mx-auto">
@@ -18,7 +19,7 @@ const HeroSection: FC = () => {
               this week
             </h3>
             <Link
-              to="/product/6"
+              to={{pathname: "/product/6", search: location.search}}
               data-test="hero-btn"
               className="inline-block bg-white rounded-md px-6 py-3 hover:bg-blue-500 hover:text-white"
             >
