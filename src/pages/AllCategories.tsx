@@ -1,7 +1,7 @@
 import { FC, useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { addCategories } from "../redux/features/productSlice";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const AllCategories: FC = () => {
   const dispatch = useAppDispatch();
@@ -21,6 +21,8 @@ const AllCategories: FC = () => {
     if (allCategories.length === 0) fetchCategories();
   }, [allCategories, dispatch]);
 
+  const location = useLocation();
+
   return (
     <div className="container mx-auto min-h-[83vh] p-4 font-karla">
       <span className="text-lg dark:text-white">Categories</span>
@@ -33,7 +35,7 @@ const AllCategories: FC = () => {
             >
               <div className="text-lg">{category.name}</div>
               <Link
-                to={{ pathname: `/category/${category.slug}` }}
+                to={{ pathname: `/category/${category.slug}`, search: location.search }}
                 className="hover:underline text-blue-500"
               >
                 View products

@@ -4,7 +4,7 @@ import { BsSearch } from "react-icons/bs";
 import { useAppSelector, useAppDispatch } from "../redux/hooks";
 import { setCartState } from "../redux/features/cartSlice";
 import { updateModal } from "../redux/features/authSlice";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { FaUser } from "react-icons/fa";
 import CustomPopup from "./CustomPopup";
@@ -19,6 +19,7 @@ const Navbar: FC = () => {
   const username = useAppSelector((state) => state.authReducer.username);
   const isDarkMode = useAppSelector((state) => state.homeReducer.isDarkMode);
   const { requireAuth } = useAuth();
+  const location = useLocation();
 
   const showCart = () => {
     requireAuth(() => dispatch(setCartState(true)));
@@ -29,7 +30,7 @@ const Navbar: FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <Link
-            to="/"
+            to={{pathname: "/", search: location.search}}
             className="text-4xl font-bold dark:text-white"
             data-test="main-logo"
           >
@@ -47,14 +48,14 @@ const Navbar: FC = () => {
           </div>
           <div className="flex gap-4 md:gap-8 items-center dark:text-white">
             <Link
-              to="/products"
+              to={{pathname: "/products", search: location.search}}
               className="text-xl font-bold"
               data-test="main-products"
             >
               Products
             </Link>
             <Link
-              to="/categories"
+              to={{pathname: "/categories", search: location.search}}
               className="text-xl font-bold"
               data-test="main-categories"
             >

@@ -5,7 +5,7 @@ import { addToCart } from "../redux/features/cartSlice";
 import { useAppDispatch } from "../redux/hooks";
 import toast from "react-hot-toast";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import PriceSection from "./PriceSection";
 import useAuth from "../hooks/useAuth";
 
@@ -20,6 +20,7 @@ const ProductCard: FC<Product> = ({
 }) => {
   const dispatch = useAppDispatch();
   const { requireAuth } = useAuth();
+  const location = useLocation();
 
   const addCart = () => {
     requireAuth(() => {
@@ -43,7 +44,7 @@ const ProductCard: FC<Product> = ({
   return (
     <div className="border border-gray-200 font-lato" data-test="product-card">
       <div className="text-center border-b border-gray-200">
-        <Link to={{ pathname: `/product/${id}` }}>
+        <Link to={{ pathname: `/product/${id}`, search: location.search}}>
           <img
             src={thumbnail}
             alt={title}
@@ -57,7 +58,7 @@ const ProductCard: FC<Product> = ({
         </p>
         <Link
           className="font-semibold hover:underline dark:text-white"
-          to={{ pathname: `/product/${id}` }}
+          to={{ pathname: `/product/${id}`,  search: location.search}}
         >
           {title}
         </Link>

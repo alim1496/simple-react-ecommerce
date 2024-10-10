@@ -6,12 +6,13 @@ import {
   MdOutlineLogout,
 } from "react-icons/md";
 import { doLogout } from "../redux/features/authSlice";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const CustomPopup: FC = () => {
   const dispatch = useAppDispatch();
   const [isVisible, setVisible] = useState(false);
   const username = useAppSelector((state) => state.authReducer.username);
+  const location = useLocation();
 
   const handlePopup = () => {
     setVisible((v) => !v);
@@ -47,7 +48,7 @@ const CustomPopup: FC = () => {
                   <MdOutlineAccountCircle />
                 </td>
                 <td className="hover:underline cursor-pointer text-lg pl-2">
-                  <Link to="/account" onClick={hidePopup}>
+                  <Link to={{pathname: "/account", search: location.search}} onClick={hidePopup}>
                     Account
                   </Link>
                 </td>
@@ -60,7 +61,7 @@ const CustomPopup: FC = () => {
                   className="hover:underline cursor-pointer text-lg pl-2"
                   data-test="wishlist-container"
                 >
-                  <Link to="/wishlist" onClick={hidePopup}>
+                  <Link to={{pathname: "/wishlist", search: location.search}} onClick={hidePopup}>
                     Wishlist
                   </Link>
                 </td>
