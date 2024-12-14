@@ -159,30 +159,30 @@ const SingleProduct: FC = () => {
               {product?.description} {lorem}
             </p>
           </div>
-          <div className="flex flex-wrap items-center mt-4 mb-2 space-x-2">
+          <div className="flex flex-wrap items-center mt-4 mb-2">
             <button
               type="button"
-              className="flex items-center space-x-1 mb-2 hover:bg-pink-700 text-white p-2 rounded bg-pink-500"
+              className="flex space-x-1 items-center mr-2 mb-2 hover:bg-pink-700 text-white py-2 px-4 rounded bg-pink-500"
               onClick={addCart}
+              title="ADD TO CART"
             >
               <AiOutlineShoppingCart />
-              <span>ADD TO CART</span>
             </button>
             <button
               type="button"
-              className="flex items-center space-x-1 mb-2 bg-blue-500 text-white p-2 rounded hover:bg-blue-700"
+              className="flex space-x-1 items-center mr-2 mb-2 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
               onClick={buyNow}
+              title="BUY NOW"
             >
               <FaHandHoldingDollar />
-              <span>BUY NOW</span>
             </button>
             <button
               type="button"
-              className="flex items-center space-x-1 mb-2 bg-yellow-500 text-white p-2 rounded hover:bg-yellow-700"
+              className="flex space-x-1 items-center mb-2 bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-700"
               onClick={addWishlist}
+              title="ADD TO WISHLIST"
             >
               <MdFavoriteBorder />
-              <span>ADD TO WISHLIST</span>
             </button>
           </div>
         </div>
