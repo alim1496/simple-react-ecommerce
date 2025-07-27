@@ -3,6 +3,7 @@ import { useAppSelector, useAppDispatch } from "../redux/hooks";
 import { addProducts } from "../redux/features/productSlice";
 import ProductCard from "../components/ProductCard";
 import { Product } from "../models/Product";
+import { updateLoading } from "../redux/features/homeSlice";
 
 const AllProducts: FC = () => {
   const dispatch = useAppDispatch();
@@ -11,13 +12,16 @@ const AllProducts: FC = () => {
   const allProducts = useAppSelector(
     (state) => state.productReducer.allProducts
   );
+  const isLoading = useAppSelector((state) => state.homeReducer.isLoading);
 
   useEffect(() => {
     const fetchProducts = () => {
+      dispatch(updateLoading(true));
       fetch("https://dummyjson.com/products?limit=500")
         .then((res) => res.json())
         .then(({ products }) => {
           dispatch(addProducts(products));
+          dispatch(updateLoading(false));
         });
     };
 
@@ -70,11 +74,19 @@ const AllProducts: FC = () => {
               <option value="desc">Price (high to low)</option>
             </select>
           </div>
-          <div className="grid gap-4 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-            {currentProducts.map((product) => (
-              <ProductCard key={product.id} {...product} />
-            ))}
-          </div>
+          
+          {isLoading ? (
+            <div className="flex items-center justify-center">
+              <div className="animate-spin mt-32 rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900 dark:border-white"></div>
+            </div>
+          ) : (
+            <div className="grid gap-4 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+              {currentProducts.map((product) => (
+                <ProductCard key={product.id} {...product} />
+              ))}
+            </div>
+          )} 
+          
         </div>
       </div>
     </div>

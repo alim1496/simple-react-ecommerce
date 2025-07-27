@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useAppDispatch } from "../redux/hooks";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { addToCart, setCartState } from "../redux/features/cartSlice";
 import { Product } from "../models/Product";
 import RatingStar from "../components/RatingStar";
@@ -13,6 +13,7 @@ import Reviews from "../components/Reviews";
 import useAuth from "../hooks/useAuth";
 import { MdFavoriteBorder } from "react-icons/md";
 import { addToWishlist } from "../redux/features/productSlice";
+import { updateLoading } from "../redux/features/homeSlice";
 
 const lorem =
   "It is important to take care of the patient, to be followed by the patient, but it will happen at such a time that there is a lot of work and pain. For to come to the smallest detail, no one should practice any kind of work unless he derives some benefit from it. Do not be angry with the pain in the reprimand in the pleasure he wants to be a hair from the pain in the hope that there is no breeding. Unless they are blinded by lust, they do not come forth; they are in fault who abandon their duties and soften their hearts, that is, their labors.";
@@ -26,9 +27,11 @@ const SingleProduct: FC = () => {
   const [sCategory, setScategory] = useState<string>();
   const [similar, setSimilar] = useState<Product[]>([]);
   const { requireAuth } = useAuth();
-
+  const isLoading = useAppSelector((state) => state.homeReducer.isLoading);
+  
   useEffect(() => {
     const fetchProductDetails = () => {
+      dispatch(updateLoading(true));
       fetch(`https://dummyjson.com/products/${productID}`)
         .then((res) => res.json())
         .then((data) => {
@@ -37,10 +40,11 @@ const SingleProduct: FC = () => {
           setImgs(images);
           setScategory(category);
           setSelectedImg(thumbnail);
+          dispatch(updateLoading(false));
         });
     };
     fetchProductDetails();
-  }, [productID]);
+  }, [productID, dispatch]);
 
   useEffect(() => {
     const fetchPreferences = (cat: string) => {
@@ -105,6 +109,14 @@ const SingleProduct: FC = () => {
       }
     });
   };
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center min-h-[83vh]">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900 dark:border-white"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="container mx-auto pt-8 dark:text-white">

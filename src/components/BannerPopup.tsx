@@ -23,6 +23,7 @@ const BannerPopup: FC = () => {
         <button
           onClick={() => {
             dispatch(updateBanner(false));
+            localStorage.setItem("isBannerVisibleClosed", "true");
           }}
           className="absolute top-0 right-0 m-2 bg-white rounded-full p-2"
         >
