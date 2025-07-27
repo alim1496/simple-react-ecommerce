@@ -2,8 +2,9 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { HomeSlice } from "../../models/HomeSlice";
 
 const initialState: HomeSlice = {
-  isBannerVisible: true,
+  isBannerVisible: localStorage.getItem("isBannerVisibleClosed") === "true" ? false : true,
   isDarkMode: false,
+  isLoading: false,
 };
 
 export const homeSlice = createSlice({
@@ -16,8 +17,12 @@ export const homeSlice = createSlice({
     updateDarkMode: (state, action: PayloadAction<boolean>) => {
       return { ...state, isDarkMode: action.payload };
     },
+    updateLoading: (state, action: PayloadAction<boolean>) => {
+      return { ...state, isLoading: action.payload };
+    },
   },
 });
 
-export const { updateBanner, updateDarkMode } = homeSlice.actions;
+export const { updateBanner, updateDarkMode, updateLoading } =
+  homeSlice.actions;
 export default homeSlice.reducer;
