@@ -35,7 +35,7 @@ const Navbar: FC = () => {
           >
             Shopify
           </Link>
-          <div className="lg:flex hidden w-full max-w-[500px]">
+          <div className="lg:flex hidden w-center max-w-[500px] border-1 border-blue-500 rounded overflow-hidden">
             <input
               type="text"
               placeholder="Search for a product..."
