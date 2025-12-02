@@ -1,7 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import { useAppSelector, useAppDispatch } from "../redux/hooks";
 import { addProducts } from "../redux/features/productSlice";
-import ProductCard from "../components/ProductCard";
 import { Product } from "../models/Product";
 import { updateLoading } from "../redux/features/homeSlice";
 import SortProducts from "../components/SortProducts"
