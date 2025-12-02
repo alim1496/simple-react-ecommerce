@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../redux/hooks";
 import { Product } from "../models/Product";
 import ProductCard from "../components/ProductCard";
@@ -12,6 +12,7 @@ const SingleCategory: FC = () => {
   const { slug } = useParams();
   const [productList, setProductList] = useState<Product[]>([]);
   const isLoading = useAppSelector((state) => state.homeReducer.isLoading);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProducts = () => {
@@ -32,7 +33,7 @@ const SingleCategory: FC = () => {
     <div className="container mx-auto min-h-[83vh] p-4 font-karla">
       <div className="flex items-center justify-between space-x-2 text-lg dark:text-white">
         <div>
-          <span>Categories</span>
+          <button onClick={() => {navigate('/categories')}}>Categories</button>
           <span> {">"} </span>
           <span className="font-bold">{slug}</span>
         </div>
