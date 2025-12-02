@@ -5,6 +5,7 @@ import ProductCard from "../components/ProductCard";
 import { Product } from "../models/Product";
 import { updateLoading } from "../redux/features/homeSlice";
 import SortProducts from "../components/SortProducts"
+import PaginatedProducts from "../components/PaginatedProducts";
 
 const AllProducts: FC = () => {
   const dispatch = useAppDispatch();
@@ -41,18 +42,7 @@ const AllProducts: FC = () => {
             <SortProducts products={currentProducts} onChange={setCurrentProducts} />
           </div>
 
-          {isLoading ? (
-            <div className="flex items-center justify-center">
-              <div className="animate-spin mt-32 rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900 dark:border-white"></div>
-            </div>
-          ) : (
-            <div className="grid gap-4 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-              {currentProducts.map((product) => (
-                <ProductCard key={product.id} {...product} />
-              ))}
-            </div>
-          )}
-
+          <PaginatedProducts products={currentProducts} isLoading={isLoading} initialRows={5} />
         </div>
       </div>
     </div>
