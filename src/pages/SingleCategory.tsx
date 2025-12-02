@@ -5,13 +5,14 @@ import { Product } from "../models/Product";
 import ProductCard from "../components/ProductCard";
 import { useAppSelector } from "../redux/hooks";
 import { updateLoading } from "../redux/features/homeSlice";
+import SortProducts from "../components/SortProducts"
 
 const SingleCategory: FC = () => {
   const dispatch = useAppDispatch();
   const { slug } = useParams();
   const [productList, setProductList] = useState<Product[]>([]);
   const isLoading = useAppSelector((state) => state.homeReducer.isLoading);
-  
+
   useEffect(() => {
     const fetchProducts = () => {
       dispatch(updateLoading(true));
@@ -29,10 +30,13 @@ const SingleCategory: FC = () => {
 
   return (
     <div className="container mx-auto min-h-[83vh] p-4 font-karla">
-      <div className="flex items-center space-x-2 text-lg dark:text-white">
-        <span>Categories</span>
-        <span> {">"} </span>
-        <span className="font-bold">{slug}</span>
+      <div className="flex items-center justify-between space-x-2 text-lg dark:text-white">
+        <div>
+          <span>Categories</span>
+          <span> {">"} </span>
+          <span className="font-bold">{slug}</span>
+        </div>
+        <SortProducts products={productList} onChange={setProductList} />
       </div>
       {isLoading ? (
         <div className="flex items-center justify-center">
