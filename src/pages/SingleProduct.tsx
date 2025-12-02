@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { addToCart, setCartState } from "../redux/features/cartSlice";
 import { Product } from "../models/Product";
@@ -28,7 +28,8 @@ const SingleProduct: FC = () => {
   const [similar, setSimilar] = useState<Product[]>([]);
   const { requireAuth } = useAuth();
   const isLoading = useAppSelector((state) => state.homeReducer.isLoading);
-  
+  const navigate = useNavigate()
+
   useEffect(() => {
     const fetchProductDetails = () => {
       dispatch(updateLoading(true));
@@ -120,6 +121,7 @@ const SingleProduct: FC = () => {
 
   return (
     <div className="container mx-auto pt-8 dark:text-white">
+      <button onClick={() => {navigate(-1)}} className="hover:text-gray-600"> ← Back </button>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 px-4 font-karla">
         <div className="space-y-2">
           <img src={selectedImg} alt="selected" className="h-80" />
@@ -130,9 +132,8 @@ const SingleProduct: FC = () => {
                   src={_img}
                   key={_img}
                   alt="thumb"
-                  className={`w-12 cursor-pointer hover:border-2 hover:border-black ${
-                    _img === selectedImg ? "border-2 border-black" : ""
-                  }`}
+                  className={`w-12 cursor-pointer hover:border-2 hover:border-black ${_img === selectedImg ? "border-2 border-black" : ""
+                    }`}
                   onClick={() => setSelectedImg(_img)}
                 />
               ))}
