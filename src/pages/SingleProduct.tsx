@@ -31,6 +31,10 @@ const SingleProduct: FC = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     const fetchProductDetails = () => {
       dispatch(updateLoading(true));
       fetch(`https://dummyjson.com/products/${productID}`)
