@@ -71,7 +71,6 @@ const Navbar: FC = () => {
                     onClick={() => dispatch(updateModal(true))}
                     data-test="login-btn"
                   >
-                    Login
                   </span>
                 )}
               </div>
