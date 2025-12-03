@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-//import { BsSearch } from "react-icons/bs";
 import { useAppSelector, useAppDispatch } from "../redux/hooks";
 import { setCartState } from "../redux/features/cartSlice";
 import { updateModal } from "../redux/features/authSlice";
@@ -52,7 +51,7 @@ const Navbar: FC = () => {
             >
               Categories
             </Link>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center">
               {username !== "" ? (
                 <img
                   src="https://robohash.org/Terry.png?set=set4"

@@ -18,12 +18,12 @@ const SearchBar: FC = () => {
             handleSearch();
         }
     };
-
+// lg:flex hidden 
     return (
-        <div className="lg:flex hidden w-center max-w-[500px] border-1 border-blue-500 rounded overflow-hidden">
+        <div className="flex w-center max-w-[500px] border-1 border-blue-500 mx-5 rounded overflow-hidden">
             <input
                 type="text"
-                placeholder="Search for a product..."
+                placeholder="apple.."
                 className="border-2 border-blue-500 px-6 py-2 w-full dark:text-white dark:bg-slate-800"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
