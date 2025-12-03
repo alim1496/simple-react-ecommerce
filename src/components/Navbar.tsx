@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { BsSearch } from "react-icons/bs";
+//import { BsSearch } from "react-icons/bs";
 import { useAppSelector, useAppDispatch } from "../redux/hooks";
 import { setCartState } from "../redux/features/cartSlice";
 import { updateModal } from "../redux/features/authSlice";
@@ -10,6 +10,7 @@ import { FaUser } from "react-icons/fa";
 import CustomPopup from "./CustomPopup";
 import { updateDarkMode } from "../redux/features/homeSlice";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
+import SearchBar from "./SearchBar";
 
 const Navbar: FC = () => {
   const dispatch = useAppDispatch();
@@ -35,16 +36,7 @@ const Navbar: FC = () => {
           >
             Shopify
           </Link>
-          <div className="lg:flex hidden w-center max-w-[500px] border-1 border-blue-500 rounded overflow-hidden">
-            <input
-              type="text"
-              placeholder="Search for a product..."
-              className="border-2 border-blue-500 px-6 py-2 w-full dark:text-white dark:bg-slate-800"
-            />
-            <div className="bg-blue-500 text-white text-[26px] grid place-items-center px-4">
-              <BsSearch />
-            </div>
-          </div>
+          <SearchBar />
           <div className="flex gap-4 md:gap-8 items-center dark:text-white">
             <Link
               to="/products"
