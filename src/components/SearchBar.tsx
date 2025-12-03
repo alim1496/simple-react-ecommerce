@@ -2,7 +2,11 @@ import { FC, useState, KeyboardEvent } from "react";
 import { BsSearch } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
-const SearchBar: FC = () => {
+interface SearchBarProps {
+    onSearch?: () => void;
+}   
+
+const SearchBar: FC<SearchBarProps> = ({ onSearch }) => {
     const [searchQuery, setSearchQuery] = useState("");
     const navigate = useNavigate();
 
@@ -10,6 +14,7 @@ const SearchBar: FC = () => {
         if (searchQuery.trim()) {
             navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
             setSearchQuery("");
+            onSearch?.();
         }
     };
 
@@ -18,7 +23,7 @@ const SearchBar: FC = () => {
             handleSearch();
         }
     };
-// lg:flex hidden 
+    // lg:flex hidden 
     return (
         <div className="flex w-center max-w-[500px] border-1 border-blue-500 mx-5 rounded overflow-hidden">
             <input
