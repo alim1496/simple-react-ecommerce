@@ -17,6 +17,7 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 import BannerPopup from "./components/BannerPopup";
 import AllCategories from "./pages/AllCategories";
 import SingleCategory from "./pages/SingleCategory";
+import SearchPage from "./pages/SearchPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/search" element={<SearchPage />} />
         <Route path="/products" element={<AllProducts />} />
         <Route path="/categories" element={<AllCategories />} />
         <Route path="/product/:productID" element={<SingleProduct />} />

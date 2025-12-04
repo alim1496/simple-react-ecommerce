@@ -8,7 +8,7 @@ const Banner: FC = () => (
       <h1 className="text-4xl font-bold mb-1">Don't miss the offer</h1>
       <h2 className="text-3xl font-semibold mb-4">Grab it now</h2>
       <Link
-        to="/product/4"
+        to="/products"
         className="inline-block bg-white dark:bg-slate-800 rounded-md px-6 py-3 hover:bg-blue-500 hover:text-white"
         data-test="banner-btn"
       >

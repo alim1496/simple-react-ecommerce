@@ -1,17 +1,19 @@
 import { FC, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../redux/hooks";
 import { Product } from "../models/Product";
-import ProductCard from "../components/ProductCard";
 import { useAppSelector } from "../redux/hooks";
 import { updateLoading } from "../redux/features/homeSlice";
+import SortProducts from "../components/SortProducts"
+import PaginatedProducts from "../components/PaginatedProducts";
 
 const SingleCategory: FC = () => {
   const dispatch = useAppDispatch();
   const { slug } = useParams();
   const [productList, setProductList] = useState<Product[]>([]);
   const isLoading = useAppSelector((state) => state.homeReducer.isLoading);
-  
+  const navigate = useNavigate();
+
   useEffect(() => {
     const fetchProducts = () => {
       dispatch(updateLoading(true));
@@ -29,12 +31,15 @@ const SingleCategory: FC = () => {
 
   return (
     <div className="container mx-auto min-h-[83vh] p-4 font-karla">
-      <div className="flex items-center space-x-2 text-lg dark:text-white">
-        <span>Categories</span>
-        <span> {">"} </span>
-        <span className="font-bold">{slug}</span>
+      <div className="flex items-center justify-between space-x-2 text-lg dark:text-white">
+        <div>
+          <button onClick={() => { navigate('/categories') }}>Categories</button>
+          <span> {">"} </span>
+          <span className="font-bold">{slug}</span>
+        </div>
+        <SortProducts products={productList} onChange={setProductList} />
       </div>
-      {isLoading ? (
+      {/* {isLoading ? (
         <div className="flex items-center justify-center">
           <div className="animate-spin mt-32 rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900 dark:border-white"></div>
         </div>
@@ -42,7 +47,8 @@ const SingleCategory: FC = () => {
         {productList?.map((product) => (
           <ProductCard key={product.id} {...product} />
         ))}
-      </div>)}
+      </div>)} */}
+      <PaginatedProducts products={productList} isLoading={isLoading} initialRows={5} />
     </div>
   );
 };
