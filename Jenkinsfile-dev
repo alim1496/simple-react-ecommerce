@@ -1,0 +1,58 @@
+pipeline {
+    agent any
+
+    environment {
+        IMAGE_NAME = "react-ecommerce-dev"
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Setup') {
+            steps {
+                sh 'npm install'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'npm run build'
+            }
+        }
+
+        stage('Docker Build') {
+            steps {
+                sh 'docker build -t $IMAGE_NAME .'
+            }
+        }
+
+        stage('Run Docker') {
+            steps {
+                sh 'docker run -d -p 3002:80 --name ${IMAGE_NAME}-container $IMAGE_NAME'
+            }
+        }
+
+        stage('Smoke Test') {
+            steps {
+                sh 'curl -f http://localhost:3002 || exit 1'
+            }
+        }
+
+        stage('Archive Artifacts') {
+            steps {
+                archiveArtifacts artifacts: '**/dist/**', fingerprint: true
+            }
+        }
+    }
+
+    post {
+        always {
+            sh 'docker ps -q | xargs -r docker stop'
+            sh 'docker ps -aq | xargs -r docker rm'
+        }
+    }
+}
