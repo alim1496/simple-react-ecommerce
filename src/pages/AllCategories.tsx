@@ -45,7 +45,7 @@ const AllCategories: FC = () => {
                   to={{ pathname: `/category/${category.slug}` }}
                   className="hover:underline text-blue-500"
                 >
-                  View products
+                  VIEW PRODUCTS
                 </Link>
               </div>
             ))}
