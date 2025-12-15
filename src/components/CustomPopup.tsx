@@ -48,7 +48,7 @@ const CustomPopup: FC = () => {
                 </td>
                 <td className="hover:underline cursor-pointer text-lg pl-2">
                   <Link to="/account" onClick={hidePopup}>
-                    Account
+                    Your Account
                   </Link>
                 </td>
               </tr>

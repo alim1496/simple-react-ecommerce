@@ -37,7 +37,7 @@ const AllProducts: FC = () => {
       <div className="grid grid-cols-4 gap-1">
         <div className="col-span-4 space-y-4">
           <div className="flex items-center justify-between">
-            <span className="text-lg dark:text-white">Products</span>
+            <span className="text-lg dark:text-white">PRODUCTS</span>
             <SortProducts products={currentProducts} onChange={setCurrentProducts} />
           </div>
 
