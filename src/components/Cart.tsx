@@ -34,7 +34,7 @@ const Cart: FC = () => {
       <div className="bg-[#0000007d] w-full min-h-screen fixed left-0 top-0 z-20 overflow-y-auto">
         {checkout ? (
           <div className="max-w-[400px] w-full min-h-full bg-white absolute right-0 top-0 p-6 font-karla dark:bg-slate-600 dark:text-white">
-            <h1 className="font-bold text-xl mb-1">Checkout</h1>
+            <h1 className="font-bold text-xl mb-1">Checkout!</h1>
             <p className="leading-4 mb-3">
               Welcome to the checkout section. This is being a development
               project, I haven't implemented any payment related task. If you
