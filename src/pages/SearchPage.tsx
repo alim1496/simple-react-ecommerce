@@ -5,6 +5,7 @@ import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { updateLoading } from "../redux/features/homeSlice";
 import SortProducts from "../components/SortProducts";
 import PaginatedProducts from "../components/PaginatedProducts";
+import { API_ENDPOINTS } from "../api";
 
 interface Category {
     slug: string;
@@ -34,7 +35,7 @@ const SearchPage: FC = () => {
 
             try {
                 const productsResponse = await fetch(
-                    `https://dummyjson.com/products/search?q=${encodeURIComponent(query)}`
+                    `${API_ENDPOINTS.PRODUCTS_SEARCH}?q=${encodeURIComponent(query)}`
                 );
 
                 const data = await productsResponse.json();
@@ -51,7 +52,7 @@ const SearchPage: FC = () => {
                     setCategoryResults([]);
                 } else {
                     const categoriesResponse = await fetch(
-                        "https://dummyjson.com/products/categories"
+                        `${API_ENDPOINTS.PRODUCTS_CATEGORIES}`
                     );
                     const categoriesData = await categoriesResponse.json();
 
