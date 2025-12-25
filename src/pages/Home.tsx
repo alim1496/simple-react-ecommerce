@@ -10,13 +10,14 @@ import {
 import { Product } from "../models/Product";
 import LatestProducts from "../components/LatestProducts";
 import Banner from "../components/Banner";
+import { API_ENDPOINTS } from "../api";
 
 const Home: FC = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     const fetchProducts = () => {
-      fetch("https://dummyjson.com/products?limit=24")
+      fetch(`${API_ENDPOINTS.PRODUCTS}?limit=24`)
         .then((res) => res.json())
         .then(({ products }) => {
           const productList: Product[] = [];

@@ -1,4 +1,5 @@
 import { FC, useEffect, useState } from "react";
+import { API_ENDPOINTS } from "../api";
 
 interface Address {
   address: string;
@@ -35,7 +36,7 @@ const Profile: FC = () => {
   const [info, setInfo] = useState<UserInfo>();
 
   useEffect(() => {
-    fetch("https://dummyjson.com/users/1")
+    fetch(`${API_ENDPOINTS.USER.replace(":id", "1")}`)
       .then((res) => res.json())
       .then((data) => {
         setInfo(data);
