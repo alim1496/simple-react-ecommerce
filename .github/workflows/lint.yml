@@ -43,5 +43,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Cache build output
+        id: cache-build
+        uses: actions/cache@v4
+        with:
+          path: |
+            dist
+            build
+            .next
+          key: ${{ runner.os }}-build-${{ hashFiles('package-lock.json') }}-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ hashFiles('package-lock.json') }}-
+            ${{ runner.os }}-build-
+
       - name: Run Build
+        if: steps.cache-build.outputs.cache-hit != 'true'
         run: npm run build
