@@ -1,4 +1,4 @@
-import { TbTruckDelivery, TbDiscount2 } from "react-icons/tb";
+import { TbTruckDelivery, TbDiscount } from "react-icons/tb";
 import { RiRefund2Fill } from "react-icons/ri";
 import { MdSupportAgent } from "react-icons/md";
 import { FC } from "react";
@@ -16,7 +16,7 @@ const data = [
     desc: "Money back guarantee",
   },
   {
-    icon: <TbDiscount2 className="text-4xl dark:text-white" />,
+    icon: <TbDiscount className="text-4xl dark:text-white" />,
     title: "Member Discount",
     desc: "On order over $99",
   },
